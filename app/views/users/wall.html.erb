@@ -1,6 +1,6 @@
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row" id="pad">
 
 	<%=image_tag("dog.png", :class=>"img-responsive", :alt=>"Responsive image") %>
 </br>
@@ -8,7 +8,7 @@
 </br>
 <%= form_for(@user, remote: true) do |f| %>
 <%= f.text_field :body %>
-<%= f.submit %>
+<%= f.submit "Create Amazing Memory" %>
 <% end%>
 
 <ul class="echos">
