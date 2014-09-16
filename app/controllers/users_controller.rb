@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   def wall
     @user = User.new
-    @users = User.all
+   @users = User.order('id DESC')
 
   end
   # GET /users

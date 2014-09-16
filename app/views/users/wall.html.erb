@@ -1,3 +1,11 @@
+
+<div class="container-fluid">
+  <div class="row">
+
+	<%=image_tag("dog.png", :class=>"img-responsive", :alt=>"Responsive image") %>
+</br>
+<b>Tell us your favorite FooFoo Memory!</b>
+</br>
 <%= form_for(@user, remote: true) do |f| %>
 <%= f.text_field :body %>
 <%= f.submit %>
@@ -6,4 +14,9 @@
 <ul class="echos">
 
 
-</ul>
+<%@users.each do |x|%>
+    <li><%=x.body%></li>
+    <%end%>
+    </ul>
+  </div>
+</div>
